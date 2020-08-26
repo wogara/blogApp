@@ -5,8 +5,7 @@ var mongoose = require('mongoose');
 var methodOverride = require('method-override');
 var expressSanitizer = require("express-sanitizer")
 
-//mongoose.connect("mongodb://localhost/restful_blog_app",{useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });//{ useNewUrlParser: true });
-var url = process.env.DATABASEURL || "mongodb+srv://wogara:Quaresma7!@cluster0-tsjiz.mongodb.net/test?retryWrites=true&w=majority";
+var url = process.env.DATABASEURL || "mongodb+srv://username:password@cluster0-tsjiz.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(url,{
     useNewUrlParser:true,
     useCreateIndex:true
@@ -116,12 +115,6 @@ app.delete("/blogs/:id",function(req,res){
 		}
 	})
 })
-// Blog.create({
-// 	title: "check blog",
-// 	image: "https://i.ytimg.com/vi/2Twtsm6roa8/hqdefault.jpg",
-// 	body: "this is a fake blog to check my app"
-// });
-
 
 app.listen(process.env.PORT || 3000,function(){
 	console.log("server is listening");
