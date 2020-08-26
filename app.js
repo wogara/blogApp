@@ -1,8 +1,8 @@
-var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var methodOverride = require('method-override');
+var express          = require('express');
+var app              = express();
+var bodyParser       = require('body-parser');
+var mongoose         = require('mongoose');
+var methodOverride   = require('method-override');
 var expressSanitizer = require("express-sanitizer")
 
 var url = process.env.DATABASEURL || "mongodb+srv://username:password@cluster0-tsjiz.mongodb.net/test?retryWrites=true&w=majority";
